@@ -807,20 +807,22 @@ p {
 
 .checkbox-label {
   position: relative;
+  cursor: pointer;
+  line-height: 1.71;
 }
 
 .checkbox {
+  padding: 0px;
+  margin: 0px;
   appearance: none;
-  line-height: 1.71;
-  cursor: pointer;
 }
 
 .checkbox-square,
 .checkbox-icon {
   position: absolute;
-  top: 0px;
+  top: 50%;
   left: -7px;
-  transform: translateX(-100%);
+  transform: translate(-100%, -50%);
   fill: var(--title-text-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
