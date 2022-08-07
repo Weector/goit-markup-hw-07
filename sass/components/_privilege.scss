@@ -5,6 +5,7 @@
 .privilege__list {
   display: flex;
   padding-left: 0;
+  @extend .list;
 }
 .privilege__item {
   width: 270px;

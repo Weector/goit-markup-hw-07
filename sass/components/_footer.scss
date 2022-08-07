@@ -15,6 +15,7 @@
 
 .address {
   padding: 0;
+  @extend .list;
 }
 
 .address__item:not(:first-child) {
@@ -60,6 +61,7 @@
   margin-top: 20px;
   padding-left: 0;
   list-style: none;
+  @extend .list;
 }
 
 .join__icon {

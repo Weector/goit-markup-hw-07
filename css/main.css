@@ -23,7 +23,7 @@ p {
   padding-right: 15px;
 }
 
-.list {
+.list, .project, .filter, .join__list, .address, .clients, .employee, .speciality, .privilege__list, .contact, .navigation__list {
   list-style: none;
 }
 

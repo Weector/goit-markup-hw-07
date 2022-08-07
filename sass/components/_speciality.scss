@@ -1,6 +1,7 @@
 .speciality {
   display: flex;
   padding-left: 0;
+  @extend .list;
 }
 
 .speciality__item {

@@ -1,6 +1,7 @@
 .clients {
   display: inline-flex;
   padding-left: 0px;
+  @extend .list;
 }
 
 .clients__item:not(:last-child) {

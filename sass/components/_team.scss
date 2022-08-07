@@ -5,6 +5,7 @@
 .employee {
   display: flex;
   padding-left: 0;
+  @extend .list;
 }
 
 .employee__list:not(:last-child) {
