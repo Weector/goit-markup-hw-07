@@ -22,6 +22,16 @@
   }
 }
 
+.project-link {
+  display: block;
+  text-decoration: none;
+  outline: transparent;
+
+  &:focus {
+    box-shadow: $portfolio-box-shadow;
+  }
+}
+
 .project__thumb {
   border: 1px solid #eeeeee;
   border-top: none;
@@ -32,11 +42,14 @@
   color: $title-text-color;
   font-size: 18px;
   letter-spacing: 0.06em;
+  line-height: calc(36 / 18);
 }
 
 .project__filter {
   margin-top: 4px;
   font-size: 16px;
+  line-height: calc(30 / 16);
+  color: $primary-text-color;
 }
 
 .project__card {
@@ -59,7 +72,8 @@
   transform: translatey(100%);
   transition: transform $timing-function;
 
-  .project__item:hover & {
+  .project__item:hover &,
+  .project-link:focus & {
     transform: translatey(0);
   }
 }

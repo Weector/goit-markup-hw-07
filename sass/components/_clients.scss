@@ -16,8 +16,7 @@
   color: $logo-color;
   border: 1px solid $logo-color;
   border-radius: 4px;
-  align-items: center;
-  justify-content: center;
+  outline: transparent;
   transition: color $timing-function, border-color $timing-function;
 
   &:hover,

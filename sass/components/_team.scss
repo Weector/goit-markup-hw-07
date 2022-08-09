@@ -41,6 +41,7 @@
   padding: 12px;
   border-radius: 50%;
   fill: $logo-color;
+  outline: transparent;
   transition: fill $timing-function, background-color $timing-function,
     border-radius $timing-function;
 

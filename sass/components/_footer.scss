@@ -1,5 +1,6 @@
 .footer__mark {
   display: flex;
+  align-items: baseline;
 }
 
 .footer {
@@ -45,7 +46,6 @@
 }
 
 .join {
-  padding-top: 12px;
   margin-left: 70px;
 }
 
@@ -89,7 +89,6 @@
 .subscribe {
   position: relative;
   margin-left: 93px;
-  padding-top: 12px;
 }
 
 .subscribe__label {

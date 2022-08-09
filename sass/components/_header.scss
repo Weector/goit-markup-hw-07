@@ -1,32 +1,33 @@
 .header {
   display: flex;
   align-items: center;
-  padding: 24px 0px 25px;
   border-bottom: 1px solid #ececec;
 }
 
 .navigation {
   display: flex;
+  align-items: center;
   padding-left: 0px;
 }
 
 .navigation__list {
   display: flex;
-  align-items: center;
   padding-left: 0px;
+  align-items: center;
 
   @extend .list;
 }
 
 .navigation__item {
-  position: relative;
-
   &:not(:last-child) {
     margin-right: 50px;
   }
 }
 
 .navigation__link {
+  position: relative;
+  display: block;
+  padding: 32px 0px;
   color: $title-text-color;
   font-weight: 500;
   line-height: 1.14;
@@ -46,11 +47,10 @@
   &::after {
     content: '';
     position: absolute;
-    bottom: -32px;
+    bottom: -1px;
     left: 0px;
     width: 100%;
     padding: 2px;
-    transform: translateY(37%);
     background-color: $accent-color;
     border-radius: 2px;
   }

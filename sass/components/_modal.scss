@@ -38,12 +38,12 @@
 }
 
 .modal__btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   display: block;
   width: 30px;
   height: 30px;
-  margin-top: 8px;
-  margin-right: 8px;
-  margin-left: auto;
   padding: 0px;
   background-color: $white-color;
   border: 1px solid rgba(0, 0, 0, 0.1);
