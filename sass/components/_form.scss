@@ -23,7 +23,6 @@
   padding: 11px 15px 11px 42px;
   transition: border $timing-function;
 
-  &:hover,
   &:focus {
     border: 1px solid $accent-color;
     outline: transparent;
@@ -51,10 +50,6 @@
   .field__input:focus ~ & {
     fill: $accent-color;
   }
-
-  .field:hover & {
-    fill: $accent-color;
-  }
 }
 
 .textarea {
@@ -75,7 +70,6 @@
     color: rgba(117, 117, 117, 0.5);
   }
 
-  &:hover,
   &:focus {
     border: 1px solid $accent-color;
     outline: transparent;
@@ -93,6 +87,27 @@
   padding: 0px;
   margin: 0px;
   appearance: none;
+
+  &:focus ~ .checkbox__icon {
+    outline: 2px solid $accent-color;
+    border-radius: 2px;
+  }
+
+  &:checked ~ .checkbox__icon {
+    outline: none;
+  }
+
+  &:checked ~ .checkbox__icon {
+    background-color: $accent-color;
+  }
+
+  &:checked ~ .checkbox__icon .checkbox__icon--square {
+    opacity: 0;
+  }
+
+  &:checked ~ .checkbox__icon .checkbox__icon--check {
+    opacity: 1;
+  }
 }
 
 .checkbox__terms {
@@ -104,20 +119,17 @@
   top: 50%;
   left: -7px;
   transform: translate(-100%, -50%);
-  transition: fill $timing-function, background-color $timing-function;
+  transition: background-color $timing-function;
+}
 
-  &--agree {
-    fill: transparent;
-  }
+.checkbox__icon--squre {
+  transition: opacity $timing-function;
+}
 
-  .checkbox__input:checked ~ &--square {
-    fill: $accent-color;
-  }
-
-  .checkbox__input:checked ~ &--agree {
-    fill: $white-color;
-    background-color: $accent-color;
-  }
+.checkbox__icon--check {
+  opacity: 0;
+  fill: $white-color;
+  transition: opacity $timing-function;
 }
 
 .form__btn {

@@ -2,8 +2,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-  padding-left: 0;
-  @extend .list;
+  @extend %list;
 }
 
 .filter__btn {

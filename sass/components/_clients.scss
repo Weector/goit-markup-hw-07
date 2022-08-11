@@ -1,7 +1,6 @@
 .clients {
   display: inline-flex;
-  padding-left: 0px;
-  @extend .list;
+  @extend %list;
 }
 
 .clients__item:not(:last-child) {
@@ -9,10 +8,11 @@
 }
 
 .clients__logo {
-  display: inline-block;
+  display: flex;
   width: 170px;
   height: 92px;
-  padding: 16px 32px;
+  align-items: center;
+  justify-content: center;
   color: $logo-color;
   border: 1px solid $logo-color;
   border-radius: 4px;

@@ -1,12 +1,6 @@
 //list style
 
-.list {
+%list {
   list-style: none;
-}
-
-//no-gap
-
-.no-gap {
-  display: block;
-  border-radius: 0px;
+  padding: 0px;
 }

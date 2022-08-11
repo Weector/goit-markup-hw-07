@@ -15,8 +15,7 @@
 }
 
 .address {
-  padding: 0;
-  @extend .list;
+  @extend %list;
 }
 
 .address__item:not(:first-child) {
@@ -50,36 +49,16 @@
 }
 
 .join__title {
+  margin-bottom: 20px;
   font-size: 14px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $white-color;
 }
 
-.join__list {
-  display: flex;
-  margin-top: 20px;
-  padding-left: 0;
-  list-style: none;
-  @extend .list;
-}
-
 .join__icon {
-  display: inline-block;
-  width: 44px;
-  height: 44px;
-  padding: 12px;
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 12px;
-  border-radius: 50%;
-  outline: transparent;
   fill: $white-color;
-  transition: background-color $timing-function;
-
-  &:hover,
-  &:focus {
-    background-color: $accent-color;
-  }
 }
 
 .join__item:not(:last-child) {
@@ -112,7 +91,6 @@
   color: $white-color;
   transition: border $timing-function;
 
-  &:hover,
   &:focus {
     border: 1px solid $accent-color;
     outline: transparent;

@@ -15,6 +15,11 @@ p {
   margin-bottom: 0px;
 }
 
+.no-gap {
+  display: block;
+  border-radius: 0px;
+}
+
 .container {
   width: 1200px;
   margin-left: auto;
@@ -23,13 +28,9 @@ p {
   padding-right: 15px;
 }
 
-.list, .project, .filter, .join__list, .address, .clients, .employee, .speciality, .benefit__list, .contact, .navigation__list {
+.project, .filter, .address, .clients, .social-network, .employee, .speciality, .benefit__list, .contact, .navigation__list {
   list-style: none;
-}
-
-.no-gap {
-  display: block;
-  border-radius: 0px;
+  padding: 0px;
 }
 
 .section {
@@ -88,7 +89,6 @@ p {
 
 .navigation__list {
   display: flex;
-  padding-left: 0px;
   align-items: center;
 }
 
@@ -127,13 +127,13 @@ p {
 
 .contact {
   display: flex;
-  padding-left: 0px;
+  gap: 50px;
   margin-left: auto;
 }
 
-.contact__item {
+.contact__link {
   display: flex;
-  margin-right: 50px;
+  padding: 32px 0px;
   align-items: center;
   color: #757575;
   font-weight: 500;
@@ -142,10 +142,7 @@ p {
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact__item--retreat {
-  margin: 0px;
-}
-.contact__item:hover, .contact__item:focus {
+.contact__link:hover, .contact__link:focus {
   color: #2196f3;
 }
 
@@ -202,7 +199,6 @@ p {
 
 .benefit__list {
   display: flex;
-  padding-left: 0;
 }
 
 .benefit__item {
@@ -239,7 +235,6 @@ p {
 
 .speciality {
   display: flex;
-  padding-left: 0;
 }
 
 .speciality__item {
@@ -276,21 +271,6 @@ p {
   margin-right: 30px;
 }
 
-.employee__name {
-  color: #212121;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-}
-
-.employee__position {
-  margin-top: 10px;
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-}
-
 .employee__thumb {
   padding: 30px 0px;
   background-color: #ffffff;
@@ -299,19 +279,43 @@ p {
   text-align: center;
 }
 
-.employee__sn {
-  display: inline-flex;
-  margin-top: 16px;
-  padding: 12px;
+.employee__name {
+  margin-bottom: 10px;
+  color: #212121;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.employee__position {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.social-network {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.sn__link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   fill: #afb1b8;
   outline: transparent;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.employee__sn:not(:last-child) {
+.sn__link:not(:last-child) {
   margin-right: 10px;
 }
-.employee__sn:hover, .employee__sn:focus {
+.sn__link:hover, .sn__link:focus {
   fill: #ffffff;
   background-color: #2196f3;
   border-radius: 50%;
@@ -319,7 +323,6 @@ p {
 
 .clients {
   display: inline-flex;
-  padding-left: 0px;
 }
 
 .clients__item:not(:last-child) {
@@ -327,10 +330,11 @@ p {
 }
 
 .clients__logo {
-  display: inline-block;
+  display: flex;
   width: 170px;
   height: 92px;
-  padding: 16px 32px;
+  align-items: center;
+  justify-content: center;
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -362,10 +366,6 @@ p {
   margin-right: 0px;
 }
 
-.address {
-  padding: 0;
-}
-
 .address__item:not(:first-child) {
   margin-top: 9px;
 }
@@ -395,33 +395,16 @@ p {
 }
 
 .join__title {
+  margin-bottom: 20px;
   font-size: 14px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
 }
 
-.join__list {
-  display: flex;
-  margin-top: 20px;
-  padding-left: 0;
-  list-style: none;
-}
-
 .join__icon {
-  display: inline-block;
-  width: 44px;
-  height: 44px;
-  padding: 12px;
   background-color: rgba(255, 255, 255, 0.1);
-  padding: 12px;
-  border-radius: 50%;
-  outline: transparent;
   fill: #ffffff;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.join__icon:hover, .join__icon:focus {
-  background-color: #2196f3;
 }
 
 .join__item:not(:last-child) {
@@ -454,7 +437,7 @@ p {
   color: #ffffff;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.subscribe__input:hover, .subscribe__input:focus {
+.subscribe__input:focus {
   border: 1px solid #2196f3;
   outline: transparent;
 }
@@ -559,7 +542,7 @@ p {
   padding: 11px 15px 11px 42px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.field__input:hover, .field__input:focus {
+.field__input:focus {
   border: 1px solid #2196f3;
   outline: transparent;
   cursor: pointer;
@@ -583,9 +566,6 @@ p {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .field__input:focus ~ .field__icon {
-  fill: #2196f3;
-}
-.field:hover .field__icon {
   fill: #2196f3;
 }
 
@@ -612,7 +592,7 @@ p {
 .textarea__comment::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-.textarea__comment:hover, .textarea__comment:focus {
+.textarea__comment:focus {
   border: 1px solid #2196f3;
   outline: transparent;
   cursor: pointer;
@@ -631,6 +611,22 @@ p {
      -moz-appearance: none;
           appearance: none;
 }
+.checkbox__input:focus ~ .checkbox__icon {
+  outline: 2px solid #2196f3;
+  border-radius: 2px;
+}
+.checkbox__input:checked ~ .checkbox__icon {
+  outline: none;
+}
+.checkbox__input:checked ~ .checkbox__icon {
+  background-color: #2196f3;
+}
+.checkbox__input:checked ~ .checkbox__icon .checkbox__icon--square {
+  opacity: 0;
+}
+.checkbox__input:checked ~ .checkbox__icon .checkbox__icon--check {
+  opacity: 1;
+}
 
 .checkbox__terms {
   color: #2196f3;
@@ -641,17 +637,17 @@ p {
   top: 50%;
   left: -7px;
   transform: translate(-100%, -50%);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.checkbox__icon--agree {
-  fill: transparent;
+
+.checkbox__icon--squre {
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.checkbox__input:checked ~ .checkbox__icon--square {
-  fill: #2196f3;
-}
-.checkbox__input:checked ~ .checkbox__icon--agree {
+
+.checkbox__icon--check {
+  opacity: 0;
   fill: #ffffff;
-  background-color: #2196f3;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form__btn {
@@ -662,7 +658,6 @@ p {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-  padding-left: 0;
 }
 
 .filter__btn {
@@ -692,7 +687,6 @@ p {
 .project {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 0;
   padding-right: 0;
 }
 

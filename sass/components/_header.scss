@@ -12,10 +12,9 @@
 
 .navigation__list {
   display: flex;
-  padding-left: 0px;
   align-items: center;
 
-  @extend .list;
+  @extend %list;
 }
 
 .navigation__item {
@@ -58,15 +57,14 @@
 
 .contact {
   display: flex;
-  padding-left: 0px;
+  gap: 50px;
   margin-left: auto;
-
-  @extend .list;
+  @extend %list;
 }
 
-.contact__item {
+.contact__link {
   display: flex;
-  margin-right: 50px;
+  padding: 32px 0px;
   align-items: center;
   color: $primary-text-color;
   font-weight: 500;
@@ -75,9 +73,6 @@
   text-decoration: none;
   transition: color $timing-function;
 
-  &--retreat {
-    margin: 0px;
-  }
   &:hover,
   &:focus {
     color: $accent-color;

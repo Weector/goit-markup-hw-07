@@ -4,8 +4,7 @@
 
 .benefit__list {
   display: flex;
-  padding-left: 0;
-  @extend .list;
+  @extend %list;
 }
 .benefit__item {
   width: 270px;
