@@ -15,8 +15,10 @@ p {
   margin-bottom: 0px;
 }
 
-.no-gap {
+img {
   display: block;
+  max-width: 100%;
+  height: auto;
   border-radius: 0px;
 }
 
